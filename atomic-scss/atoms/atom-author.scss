@@ -1,0 +1,59 @@
+////////////////////////////////////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+//  ATOM - AUTHOR 			  //////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.about-author {
+	grid-column-start: 3;
+	grid-column-end: 11;
+
+	user-select: none;
+
+	@media (min-width: $screen-sm-min) {
+		grid-column-start: 2;
+		grid-column-end: 5;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+}
+
+.about-author__illustration {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem 0;
+
+	user-select: none;
+
+	figcaption {
+		width: 80%;
+		padding-top: 1.6rem;
+	}
+} // .about-author__illustration
+
+.avatar-wrapper {
+	position: relative;
+	max-width: 25rem;
+	margin-top: 8.5rem;
+	width: 100%;
+
+	svg {
+		display: block;
+		width: 100%;
+	    height: auto;
+	}
+
+	img {
+		position: absolute;
+	    bottom: 1px;
+	    width: 70%;
+	    left: 50%;
+
+	    transform: translateX(-50%);
+	}
+} // .avatar-wrapper

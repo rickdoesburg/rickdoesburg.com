@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+//  ATOM - HEADING 			  //////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+h1, h2, h3 {
+    margin-top: 0;
+
+	// Specifiy the weight of the font for iOS Safari
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin-bottom:: screenbased-calculation($minvalue: 0.8, $maxvalue: 1.4);
+
+	font-size: screenbased-calculation($minvalue: 2.8, $maxvalue: 4.8);
+    line-height: 1.25;
+    color: var(--primary-color-tint);
+} // h1
+
+h2 {
+	margin-bottom: screenbased-calculation($minvalue:1.2, $maxvalue: 1.6);;
+
+	font-size: screenbased-calculation($minvalue:2.4, $maxvalue: 4.0);
+    line-height: screenbased-calculation($minvalue:3.6, $maxvalue: 4.8);
+}

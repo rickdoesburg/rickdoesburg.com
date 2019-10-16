@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+//  BASE FILE                 //////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// Style User Selection
+::selection {
+  background-color: var(--primary-color);
+  
+  color: var(--main-font-color);
+}
+
+// Since the default root element font size in most browsers is 16px, using html { font-size: 62.5%; } makes the root element font size 10px, so everywhere else 1rem translates to 10px. Easier for the brains.
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+// Makes it easier to overwrite box-sizing on specific elements
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+// Default font-size: 16px (1.6rem);
+body {
+	background-color: var(--primary-color);
+	font-size: screenbased-calculation($minvalue:1.6, $maxvalue: 2.0);
+	// Specify the font-weight for iOS Safari
+    // https://stackoverflow.com/questions/5069752/ios-4-2-webfont-ttf-s-bold-font-weight-rendering-bug/11879044#11879044
+    font-weight: normal;
+    font-family: var(--main-font);
+	color: var(--main-font-color);
+	line-height: 2;
+
+	-webkit-font-smoothing: antialiased;
+} // body
+
+main {
+	display: grid;
+	grid-template-columns: repeat(12, [col] 1fr [col]);
+	grid-template-rows: 6rem 1fr;
+	grid-column-gap: 1.6rem;
+	grid-row-gap: 2vh;
+
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 3.2rem;
+	max-width: calc(1440px + 10vw);
+
+	@media (min-width: $screen-sm-min) {
+		grid-template-rows: 12rem 1fr;
+	}
+} // main

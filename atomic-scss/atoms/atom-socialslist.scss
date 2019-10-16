@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+//  ATOM - SOCIALSLIST 		  //////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.socialslist {
+	display: flex;
+	flex-wrap: wrap;
+
+	.sociallist__item {
+		width: 100%;
+		margin-right: 1.6rem;
+		margin-bottom: 1.6rem;
+
+		@media (min-width: $screen-sm-min) {
+			width: auto;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex: 0 1 auto;
+			padding: screenbased-calculation($minvalue: 1.2, $maxvalue: 1.6) screenbased-calculation($minvalue: 1.6, $maxvalue: 2.4);
+
+			border-radius: var(--default-border-radius);
+
+			text-decoration: none;
+
+			@media (min-width: $screen-sm-min) {
+				justify-content: center;
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, .1);
+
+				@include transition($transition-property: background-color);
+			}
+		} // a
+	} // .sociallist__item
+
+	.sociallist__item--twitter {
+		background-color: #1da1f2;
+	}
+
+	.sociallist__item--linkedin {
+		background-color: #0077b5;
+	}
+
+	.sociallist__item--github {
+		background-color: #333;
+	}
+
+	.sociallist__item--stackoverflow {
+		background-color: #f48024;
+	}
+
+	.sociallist__item--foursquare {
+		background-color: #0732a2;
+	}
+
+	svg {
+		width: 2.4rem;
+		margin-right: 1.6rem;
+	}
+
+} // .section-wrapper__socialslist 

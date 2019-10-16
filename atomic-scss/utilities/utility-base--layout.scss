@@ -1,0 +1,72 @@
+////////////////////////////////////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+//  BASE LAYOUT               //////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.main-content {
+	grid-column-start: 1;
+	grid-column-end: 13;
+
+	@media (min-width: $screen-sm-min) {
+		grid-column-start: 5;
+		grid-column-end: 13;
+	}
+
+	@media (min-width: $screen-lg-min) {
+		grid-column-start: 4;
+		grid-column-end: 13;
+	}
+} // .main-content 
+
+// Every section
+.section-wrapper {
+	padding: 0 screenbased-calculation($minvalue:2.4, $maxvalue: 3.2) screenbased-calculation($minvalue: 2.4, $maxvalue: 4, $multiply: 2) screenbased-calculation($minvalue:2.4, $maxvalue: 3.2);
+} // .main-content__block
+
+// The header section
+.section-wrapper--header {
+	li {
+		font-size: screenbased-calculation($minvalue:1.8, $maxvalue: 2.4);
+	}
+} // .section-wrapper--header 
+
+.section-wrapper__lead {
+	margin: 0;
+
+	font-size: screenbased-calculation($minvalue:3.2, $maxvalue: 5.6);
+	text-transform: uppercase;
+	line-height: screenbased-calculation($minvalue:4.8, $maxvalue: 6.7);
+
+	@media (min-width: $screen-lg-min) {
+		width: 70%
+	}
+
+	.highlight {
+		position: relative;
+
+		font-family: var(--secondary-font);
+		font-weight: 500;
+
+		white-space: nowrap;
+
+		&:before {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2.2rem;
+			width: 100%;
+
+			background-color: var(--secondary-color);
+
+			transform: skew(-20deg);
+			z-index: -1;
+			content: '';
+
+			@media (min-width: $screen-md-min) {
+				height: 3.2rem;
+			}
+		}
+	} // .highlight
+} // .main-content__block__lead
