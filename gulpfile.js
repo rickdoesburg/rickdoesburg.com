@@ -3,7 +3,8 @@ const gulp      = require('gulp');
 const jshint    = require('gulp-jshint');
 const sass      = require('gulp-sass');
 const concat    = require('gulp-concat');
-const uglify    = require('gulp-uglify');
+// const uglify    = require('gulp-uglify');
+const terser = require('gulp-terser');
 const rename    = require('gulp-rename');
 const fileInclude = require('gulp-file-include');
 const bs        = require('browser-sync').create()
@@ -40,7 +41,7 @@ gulp.task('scripts', function() {
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -53,6 +54,12 @@ gulp.task('copy', function() {
 // Copy favicons to root
 gulp.task('favicons', function() {
     return gulp.src('./assets/img/favicons/*')
+    .pipe(gulp.dest('./dist'));
+});
+
+// Copy manifest to root
+gulp.task('manifest', function() {
+    return gulp.src('./manifest.json', './serviceWorker.js')
     .pipe(gulp.dest('./dist'));
 });
 
@@ -77,4 +84,4 @@ gulp.task('browser-sync', function() {
 });
 
 // gulp.task('default', gulp.parallel('lint', 'sass', 'scripts', 'watch'));
-gulp.task('default', gulp.parallel('browser-sync','lint', 'sass', 'scripts', 'compile-html', 'favicons', 'copy', 'watch'));
+gulp.task('default', gulp.parallel('browser-sync','lint', 'sass', 'scripts', 'compile-html', 'favicons', 'manifest', 'copy', 'watch'));
