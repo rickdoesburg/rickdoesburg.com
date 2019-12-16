@@ -3,7 +3,7 @@ const gulp      = require('gulp');
 const jshint    = require('gulp-jshint');
 const sass      = require('gulp-sass');
 const concat    = require('gulp-concat');
-// const uglify    = require('gulp-uglify');
+
 const terser = require('gulp-terser');
 const rename    = require('gulp-rename');
 const fileInclude = require('gulp-file-include');
