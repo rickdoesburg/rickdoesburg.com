@@ -5,20 +5,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 .about-author {
-	grid-column-start: 3;
-	grid-column-end: 11;
+	grid-area: sidebar;
 
 	user-select: none;
-
-	@media (min-width: $screen-sm-min) {
-		grid-column-start: 2;
-		grid-column-end: 5;
-	}
-
-	@media (min-width: $screen-lg-min) {
-		grid-column-start: 1;
-		grid-column-end: 4;
-	}
 }
 
 .about-author__illustration {

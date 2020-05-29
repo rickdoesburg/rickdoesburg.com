@@ -38,10 +38,12 @@ body {
 
 main {
 	display: grid;
-	grid-template-columns: repeat(12, [col] 1fr [col]);
-	grid-template-rows: 6rem 1fr;
+	grid-template-areas: 
+	"toggle"
+	"sidebar"
+	"main";
 	grid-column-gap: 1.6rem;
-	grid-row-gap: 2vh;
+	grid-row-gap: 2.4rem;
 
 	margin-right: auto;
 	margin-left: auto;
@@ -49,6 +51,9 @@ main {
 	max-width: calc(1440px + 10vw);
 
 	@media (min-width: $screen-sm-min) {
-		grid-template-rows: 12rem 1fr;
+		grid-template-columns: 1fr 4fr;
+		grid-template-areas: 
+		"toggle toggle"
+		"sidebar main";
 	}
 } // main

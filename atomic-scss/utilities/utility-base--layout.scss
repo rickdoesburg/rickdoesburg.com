@@ -5,18 +5,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 .main-content {
-	grid-column-start: 1;
-	grid-column-end: 13;
-
-	@media (min-width: $screen-sm-min) {
-		grid-column-start: 5;
-		grid-column-end: 13;
-	}
-
-	@media (min-width: $screen-lg-min) {
-		grid-column-start: 4;
-		grid-column-end: 13;
-	}
+	grid-area: main;
 } // .main-content 
 
 // Every section

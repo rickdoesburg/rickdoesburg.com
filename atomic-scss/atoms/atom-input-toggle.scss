@@ -73,7 +73,7 @@
 } // .input-toggle__component
 
 .darkmode-enabler {
-	grid-column: 1 / 13;
+	grid-area: toggle;
 	margin-bottom: 3.2rem;
 	justify-self: center;
 
