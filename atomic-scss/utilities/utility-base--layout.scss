@@ -23,15 +23,18 @@
 // Every section
 .section-wrapper {
 	padding: 0 screenbased-calculation($minvalue:2.4, $maxvalue: 3.2) screenbased-calculation($minvalue: 2.4, $maxvalue: 4, $multiply: 2) screenbased-calculation($minvalue:2.4, $maxvalue: 3.2);
-	animation: fade-from-bottom .4s cubic-bezier(.17,.67,.83,.67) forwards;
-
-	transform: translateY(2.5rem);
-	opacity: 0;
 
 	@for $i from 1 through 3 {
 		&:nth-child(#{$i}) {
 			animation-delay: 0.25s * $i;
 		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		transform: translateY(2.5rem);
+
+		opacity: 0;
+		animation: fade-from-bottom .4s cubic-bezier(.17,.67,.83,.67) forwards;
 	}
 } // .main-content__block
 
@@ -103,5 +106,9 @@
 
 		animation: mark-word .6s ease-out forwards;
 		animation-delay: .25s;
+
+		@media (prefers-reduced-motion: reduce) {
+			content: none;
+		}
 	}
 } // .highlight
