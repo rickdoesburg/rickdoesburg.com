@@ -11,13 +11,14 @@
 	--primary-color: #D81B60;
 	--primary-color-tint: #FFBDD3;
 	--secondary-color: #0582A1;
+    --bg-color: var(--primary-color);
 	--main-font: 'Courier', 'Courier New', 'Lucida Sans Typewriter', 'Lucida Typewriter', 'monospace';
 	--secondary-font: 'circular', 'Helvetica', 'Arial', 'sans-serif';
 	--default-border-radius: 2px;
 }
 
 .darkmode-pls {
-	--primary-color: #1b1b1b;
+	--bg-color: #1b1b1b;
 }
 
 // BORDER RADIUS

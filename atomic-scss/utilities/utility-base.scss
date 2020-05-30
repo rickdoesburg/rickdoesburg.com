@@ -24,7 +24,7 @@ html {
 
 // Default font-size: 16px (1.6rem);
 body {
-	background-color: var(--primary-color);
+	background-color: var(--bg-color);
 	font-size: screenbased-calculation($minvalue:1.6, $maxvalue: 2.0);
 	// Specify the font-weight for iOS Safari
     // https://stackoverflow.com/questions/5069752/ios-4-2-webfont-ttf-s-bold-font-weight-rendering-bug/11879044#11879044
