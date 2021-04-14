@@ -84,4 +84,5 @@ gulp.task('browser-sync', function() {
 });
 
 // gulp.task('default', gulp.parallel('lint', 'sass', 'scripts', 'watch'));
+gulp.task('build', gulp.parallel('lint', 'sass', 'scripts', 'compile-html', 'favicons', 'manifest', 'copy'));
 gulp.task('default', gulp.parallel('browser-sync','lint', 'sass', 'scripts', 'compile-html', 'favicons', 'manifest', 'copy', 'watch'));

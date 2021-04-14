@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
             } else {
                 document.querySelector('body').classList.remove('darkmode-pls');
             }
-        })
+        });
     }
 });
 
