@@ -1,7 +1,7 @@
 const gulp      = require('gulp');
 
 const jshint    = require('gulp-jshint');
-const sass      = require('gulp-sass');
+const sassProcessor = require("gulp-dart-sass");
 const concat    = require('gulp-concat');
 
 const terser = require('gulp-terser');
@@ -17,9 +17,7 @@ gulp.task('lint', function() {
 
 gulp.task('sass', function() {
     return gulp.src('build-scss/*.scss')
-        .pipe(sass()
-            .on('error', sass.logError)
-        )
+        .pipe(sassProcessor().on("error", sassProcessor.logError))
         .pipe(gulp.dest('dist/css'))
         // Reload BS
         .pipe(bs.reload({stream: true}));
