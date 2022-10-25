@@ -6,54 +6,56 @@
 
 // Style User Selection
 ::selection {
-  background-color: var(--primary-color);
-  
-  color: var(--main-font-color);
+    background-color: var(--primary-color);
+
+    color: var(--main-font-color);
 }
 
 // Since the default root element font size in most browsers is 16px, using html { font-size: 62.5%; } makes the root element font size 10px, so everywhere else 1rem translates to 10px. Easier for the brains.
 html {
-	font-size: 62.5%;
-	box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-size: 62.5%;
 }
 
 // Makes it easier to overwrite box-sizing on specific elements
-*, *:before, *:after {
-	box-sizing: inherit;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 // Default font-size: 16px (1.6rem);
 body {
-	background-color: var(--bg-color);
-	font-size: screenbased-calculation($minvalue:1.6, $maxvalue: 2.0);
-	// Specify the font-weight for iOS Safari
-    // https://stackoverflow.com/questions/5069752/ios-4-2-webfont-ttf-s-bold-font-weight-rendering-bug/11879044#11879044
-    font-weight: normal;
-    font-family: var(--main-font);
-	color: var(--main-font-color);
-	line-height: 2;
+    background-color: var(--bg-color);
 
-	-webkit-font-smoothing: antialiased;
+    color: var(--main-font-color);
+    font-family: var(--main-font);
+    font-size: clamp(1.6rem, 1.5rem + 0.2564vw, 2rem);
+    -webkit-font-smoothing: antialiased;
+
+    // Specify the font-weight for iOS Safari
+    // https://stackoverflow.com/questions/5069752/ios-4-2-webfont-ttf-s-bold-font-weight-rendering-bug/11879044#11879044
+    font-weight: 400;
+    line-height: 2;
 } // body
 
 main {
-	display: grid;
-	grid-template-areas: 
-	"toggle"
-	"sidebar"
-	"main";
-	grid-column-gap: 1.6rem;
-	grid-row-gap: 2.4rem;
+    display: grid;
+    grid-column-gap: 1.6rem;
+    grid-row-gap: 4.8rem;
+    grid-template-areas: 'toggle'
+        'sidebar'
+        'main';
+    max-inline-size: calc(1440px + 10vw);
 
-	margin-right: auto;
-	margin-left: auto;
-	padding-top: 3.2rem;
-	max-width: calc(1440px + 10vw);
+    margin-inline: auto;
+    padding-block-start: 3.2rem;
 
-	@media (min-width: $screen-sm-min) {
-		grid-template-columns: 1fr 4fr;
-		grid-template-areas: 
-		"toggle toggle"
-		"sidebar main";
-	}
+    @media (min-width: $screen-sm-min) {
+        grid-template-areas: 'toggle toggle'
+            'sidebar main';
+        grid-template-columns: 1fr 4fr;
+        padding-inline: 2rem;
+    }
 } // main

@@ -4,10 +4,10 @@
 //                            //////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-@function screenbased-calculation($minvalue, $maxvalue, $minsc: $minscreensize, $maxsc: $maxscreensize, $divider: 1, $multiply: 1){
+@function screenbased-calculation($minvalue, $maxvalue, $minsc: $minscreensize, $maxsc: $maxscreensize, $divider: 1, $multiply: 1) {
     @return calc((#{$minvalue * 1rem} + #{($maxvalue - $minvalue)} * (100vw - #{$minscreensize * 1rem}) / #{($maxscreensize - $minscreensize)}) / #{$divider} * #{$multiply});
 }
 
-@mixin transition ($transition-property: all, $transition-speed: .3s) {
-    transition: $transition-property $transition-speed cubic-bezier(.5, 0, .5, 1);
+@mixin transition($transition-property: all, $transition-speed: 0.3s) {
+    transition: $transition-property $transition-speed cubic-bezier(0.5, 0, 0.5, 1);
 }

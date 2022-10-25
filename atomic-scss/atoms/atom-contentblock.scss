@@ -3,13 +3,16 @@
 //  ATOM - CONTENTBLOCK    	  //////////////////////////////////////////////////
 //                            //////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
 .content-block {
-	padding: screenbased-calculation($minvalue:2.4, $maxvalue: 3.2);
+    padding-block: clamp(2.4rem, 2.21rem + 0.5128vw, 3.2rem);
+    padding-inline: clamp(2.4rem, 2.21rem + 0.5128vw, 3.2rem);
 
-	background-color: #333;
+    background-color: #333;
 
-	@media (min-width: $screen-sm-min) {
-		margin-left: screenbased-calculation($minvalue:-2.4, $maxvalue: -3.2);
-	}
-} // .content-block 
+    hyphens: auto;
+    overflow-wrap: normal;
+
+    @media (min-width: $screen-sm-min) {
+        margin-inline-start: clamp(-2.4rem, -2.21rem + 0.5128vw, -3.2rem);
+    }
+} // .content-block

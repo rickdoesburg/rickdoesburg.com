@@ -3,46 +3,46 @@
 //  ATOM - AUTHOR 			  //////////////////////////////////////////////////
 //                            //////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
 .about-author {
-	grid-area: sidebar;
+    grid-area: sidebar;
 
-	user-select: none;
+    user-select: none;
 }
 
 .about-author__illustration {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 1rem 0;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 1rem;
+    margin-inline: 0;
 
-	user-select: none;
+    user-select: none;
 
-	figcaption {
-		width: 80%;
-		padding-top: 1.6rem;
-	}
+    figcaption {
+        inline-size: 80%;
+        padding-block-start: 1.6rem;
+    }
 } // .about-author__illustration
 
 .avatar-wrapper {
-	position: relative;
-	max-width: 25rem;
-	margin-top: 8.5rem;
-	width: 100%;
+    position: relative;
+    inline-size: 100%;
+    max-inline-size: 25rem;
+    margin-block-start: 8.5rem;
 
-	svg {
-		display: block;
-		width: 100%;
-	    height: auto;
-	}
+    svg {
+        display: block;
+        block-size: auto;
+        inline-size: 100%;
+    }
 
-	img {
-		position: absolute;
-	    bottom: 1px;
-	    width: 70%;
-	    left: 50%;
+    img {
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        inline-size: 70%;
 
-	    transform: translateX(-50%);
-	}
+        transform: translateX(-50%);
+    }
 } // .avatar-wrapper
