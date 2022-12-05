@@ -41,7 +41,15 @@
     } // .sociallist__item
 
     .sociallist__item--twitter {
-        background-color: #1DA1F2;
+        background-color: #fff;
+        
+        a {
+            color: #333;
+        }
+
+        svg {
+            color: #1DA1F2;
+        }
     }
 
     .sociallist__item--linkedin {

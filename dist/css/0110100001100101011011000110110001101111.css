@@ -622,7 +622,13 @@ a:hover {
   transition: background-color 0.3s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .socialslist .sociallist__item--twitter {
-  background-color: #1DA1F2;
+  background-color: #fff;
+}
+.socialslist .sociallist__item--twitter a {
+  color: #333;
+}
+.socialslist .sociallist__item--twitter svg {
+  color: #1DA1F2;
 }
 .socialslist .sociallist__item--linkedin {
   background-color: #0077B5;
