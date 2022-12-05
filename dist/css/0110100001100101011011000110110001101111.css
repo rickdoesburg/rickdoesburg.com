@@ -524,7 +524,7 @@ p {
   background-color: #3FC560;
 }
 .input-toggle input[type=checkbox]:checked ~ .input-toggle__component::after {
-  transform: translateX(2rem);
+  transform: translateY(-50%) translateX(2rem);
 }
 
 .input-toggle__component {
