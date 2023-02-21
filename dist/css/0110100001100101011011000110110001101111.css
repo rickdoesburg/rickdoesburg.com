@@ -621,14 +621,14 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s cubic-bezier(0.5, 0, 0.5, 1);
 }
-.socialslist .sociallist__item--twitter {
-  background-color: #fff;
+.socialslist .sociallist__item--mastodon {
+  background-color: #594adf;
 }
-.socialslist .sociallist__item--twitter a {
-  color: #333;
+.socialslist .sociallist__item--mastodon a {
+  color: #fff;
 }
-.socialslist .sociallist__item--twitter svg {
-  color: #1DA1F2;
+.socialslist .sociallist__item--mastodon svg {
+  color: #fff;
 }
 .socialslist .sociallist__item--linkedin {
   background-color: #0077B5;
