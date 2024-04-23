@@ -25,7 +25,7 @@ gulp.task('sass', function() {
 
 // Compile html and move to dist
 gulp.task('compile-html', function() {
-  return gulp.src(['components/pages/*.html', './components/templates/*.html'])
+  return gulp.src(['components/pages/*.html'])
     .pipe(fileInclude({
       prefix: '@@',
       basepath: '@file'
@@ -45,13 +45,13 @@ gulp.task('scripts', function() {
 
 // Copy assets to dist
 gulp.task('copy', function() {
-    return gulp.src('./assets/**/*')
+    return gulp.src(['./assets/**/*'], { encoding: false })
     .pipe(gulp.dest('./dist'));
 });
 
 // Copy favicons to root
 gulp.task('favicons', function() {
-    return gulp.src('./assets/img/favicons/*')
+    return gulp.src('./assets/img/favicons/*', {encoding: false})
     .pipe(gulp.dest('./dist'));
 });
 
