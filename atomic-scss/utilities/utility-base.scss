@@ -43,7 +43,6 @@ body {
 main {
     display: grid;
     grid-column-gap: 1.6rem;
-    grid-row-gap: 4.8rem;
     grid-template-areas: 'toggle'
         'sidebar'
         'main';
@@ -51,6 +50,7 @@ main {
 
     margin-inline: auto;
     padding-block-start: 3.2rem;
+    row-gap: 4.8rem;
 
     @media (min-width: $screen-sm-min) {
         grid-template-areas: 'toggle toggle'
