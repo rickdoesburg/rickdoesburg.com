@@ -18,7 +18,7 @@
 
 .main-content {
     grid-area: main;
-} // .main-content
+}
 
 // Every section
 .section-wrapper {
@@ -45,7 +45,7 @@
     li {
         font-size: clamp(1.8rem, 1.66rem + 0.3846vw, 2.4rem);
     }
-} // .section-wrapper--header
+}
 
 @keyframes mark-word {
     from {
@@ -118,4 +118,4 @@
             content: none;
         }
     }
-} // .highlight
+}

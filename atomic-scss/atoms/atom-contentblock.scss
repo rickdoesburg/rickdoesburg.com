@@ -15,4 +15,8 @@
     @media (min-width: $screen-sm-min) {
         margin-inline-start: clamp(-2.4rem, -2.21rem + 0.5128vw, -3.2rem);
     }
-} // .content-block
+
+    .strike {
+        text-decoration: line-through;
+    }
+}

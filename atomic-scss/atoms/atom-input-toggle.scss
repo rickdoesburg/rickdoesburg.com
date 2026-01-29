@@ -18,9 +18,9 @@
                     transform: translateY(-50%) translateX(2rem);
                 }
             }
-        } // &:checked;
-    } // input
-} // .input-toggle
+        }
+    }
+}
 
 .input-toggle__component {
     display: flex;
@@ -70,7 +70,7 @@
         transition: all 0.2s ease-in-out;
         content: '';
     }
-} // .input-toggle__component
+}
 
 .darkmode-enabler {
     grid-area: toggle;
@@ -79,4 +79,4 @@
     @media (min-width: $screen-sm-min) {
         justify-self: end;
     }
-} // .darkmode-enable
+}
